@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apgroupassignment.HomeController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="278.0">
+         <children>
+            <ImageView fitHeight="501.0" fitWidth="419.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../pictures/icon.jpeg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="502.0" prefWidth="385.0" style="-fx-background-color: FLORALWHITE;">
+         <children>
+            <Label alignment="CENTER" layoutX="112.0" layoutY="387.0" text="click the start button to start the quiz">
+               <font>
+                  <Font name="Arial" size="9.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="255.0" fitWidth="393.0" layoutX="2.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../pictures/boudhha.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="7.0" layoutY="14.0" prefHeight="34.0" prefWidth="375.0" text="NEPAL CITIZENSHIP QUIZ">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="31.0" />
+               </font>
+            </Label>
+            <Button fx:id="startQuizBtn" layoutX="127.0" layoutY="406.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="114.0" style="-fx-background-color: LIMEGREEN;" text="START">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="23.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="32.0" layoutY="330.0" prefHeight="43.0" prefWidth="319.0" text="WELCOME USER!">
+               <font>
+                  <Font name="Arial" size="22.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</HBox>
