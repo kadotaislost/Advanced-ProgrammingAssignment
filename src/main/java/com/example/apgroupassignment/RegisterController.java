@@ -7,6 +7,8 @@ import javafx.scene.control.*;
 import java.io.FileWriter;
 import java.io.IOException;
 
+
+
 public class RegisterController {
     @FXML
     private TextField userName;
@@ -20,6 +22,12 @@ public class RegisterController {
     private TextField userNationality;
     @FXML
     private PasswordField userPassword;
+
+    private Application application;
+
+    public void setApplication(Application application){
+        this.application = application;
+    }
     public void register(ActionEvent event){
         String name = userName.getText();
         String email = userEmail.getText();
@@ -36,9 +44,15 @@ public class RegisterController {
             String[] csvData = {name, email, birthYear, gender, nationality, password};
             csvWriter.writeNext(csvData);
             csvWriter.close();
+            application.loginScene();
         }
         catch (IOException e){
             e.printStackTrace();
         }
     }
+
+    public void loginScenebtn(ActionEvent event) throws IOException {
+        application.loginScene();
+    }
+
 }

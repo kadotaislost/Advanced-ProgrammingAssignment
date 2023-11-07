@@ -17,11 +17,26 @@ public class Application extends javafx.application.Application{
 
     public void registerScene() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("register-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 400);
+        Scene scene = new Scene(fxmlLoader.load(), 320, 420);
 
         stage.setTitle("Register!");
         stage.setScene(scene);
         stage.show();
+
+        RegisterController registerController = fxmlLoader.getController();
+        registerController.setApplication(this);
+    }
+
+    public void loginScene() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("login-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 280);
+
+        stage.setTitle("Login!");
+        stage.setScene(scene);
+        stage.show();
+
+        LoginController loginController = fxmlLoader.getController();
+        loginController.setApplication(this);
     }
 
     public static void main(String[] args) {
