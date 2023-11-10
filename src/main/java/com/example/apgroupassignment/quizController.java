@@ -1,5 +1,8 @@
 package com.example.apgroupassignment;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -45,8 +48,9 @@ public class quizController {
             "Dashain"
     };
 
+    public boolean[] isAnswered = new boolean[20];
     private String selectedAnswer;
-    private int minutes = 5;
+    private int minutes = 1;
     private int seconds = 0;
     private Timeline timeline;
 
@@ -75,6 +79,7 @@ public class quizController {
         loadQuestions();
         showCurrentQuestion();
         initializeTimer();
+        setDateLabel();
     }
 
     public void startTimer() {
@@ -93,6 +98,12 @@ public class quizController {
         if (minutes == 0 && seconds == 0) {
             // Timer expired, handle accordingly
             timeline.stop();
+
+            try {
+                closeStage();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         } else {
             if (seconds == 0) {
                 minutes--;
@@ -142,11 +153,15 @@ public class quizController {
     @FXML
     public void handlePrevButton(ActionEvent actionEvent) {
 
-
         if (currentQuestionIndex > 0) {
-            score--;
             currentQuestionIndex--;
             showCurrentQuestion();
+            if (isAnswered[currentQuestionIndex]){
+                if(score<=20 && score>0){
+                    score--;
+                }
+            }
+
         } else {
             // Handle the case when there are no previous questions
             System.out.println("No previous question available.");
@@ -154,11 +169,14 @@ public class quizController {
         updateTimerLabel();
     }
 
-    private void checkAnswer(String selectedAnswer) {
+    public void checkAnswer(String selectedAnswer) {
         if (currentQuestionIndex >= 0 && currentQuestionIndex < answers.length) {
             if (selectedAnswer.equals(answers[currentQuestionIndex])) {
 
                 score++;
+                isAnswered[currentQuestionIndex]= true;
+            }else {
+                isAnswered[currentQuestionIndex] = false;
             }
         }
         System.out.println(score);
@@ -173,7 +191,6 @@ public class quizController {
             return;
         }
 
-
         // Get the selected answer
         RadioButton selectedRadioButton = (RadioButton) optionsGroup.getSelectedToggle();
         selectedAnswer = selectedRadioButton.getText();
@@ -182,21 +199,13 @@ public class quizController {
         checkAnswer(selectedAnswer);
 
 
-
-
         if (currentQuestionIndex < questionsWithOptions.size() - 1) {
             currentQuestionIndex++;
             showCurrentQuestion();
         } else {
             // Handle the case when all questions have been displayed
             try{
-                Stage currentStage = (Stage) next.getScene().getWindow();
-                currentStage.close();
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("results.fxml"));
-                Scene scene = new Scene(fxmlLoader.load());
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.show();
+                closeStage();
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -205,5 +214,27 @@ public class quizController {
         optionsGroup.selectToggle(null);
 
         updateTimerLabel();
+    }
+
+    private void closeStage() throws IOException {
+        Stage currentStage = (Stage) next.getScene().getWindow();
+        currentStage.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("results.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+    private void setDateLabel() {
+        // Get the current date
+        LocalDate currentDate = LocalDate.now();
+
+        // Format the date as a string in the "yyyy-MM-dd" format
+        String formattedDate = currentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
+        // Set the formatted date to the date label
+        date.setText(formattedDate);
     }
 }
