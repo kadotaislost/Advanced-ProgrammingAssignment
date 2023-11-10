@@ -11,7 +11,6 @@ import javafx.stage.Stage;
 public class HomeController {
 
 
-
     @FXML
     private Button startQuizBtn;
 
@@ -31,6 +30,8 @@ public class HomeController {
                     Stage stage = new Stage();
                     stage.setScene(scene);
                     stage.show();
+                    quizController controller = fxmlLoader.getController();
+                    controller.startTimer();
 
                 }catch(Exception e){
                     e.printStackTrace();
