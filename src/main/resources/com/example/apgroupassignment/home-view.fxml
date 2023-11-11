@@ -37,7 +37,7 @@
                   <Font name="Arial Rounded MT Bold" size="23.0" />
                </font>
             </Button>
-            <Label alignment="CENTER" layoutX="32.0" layoutY="330.0" prefHeight="43.0" prefWidth="319.0" text="WELCOME USER!">
+            <Label fx:id="username" alignment="CENTER" layoutX="32.0" layoutY="330.0" prefHeight="43.0" prefWidth="319.0" text="WELCOME USER!">
                <font>
                   <Font name="Arial" size="22.0" />
                </font>

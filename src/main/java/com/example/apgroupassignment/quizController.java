@@ -1,8 +1,10 @@
 package com.example.apgroupassignment;
 
+import java.io.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import com.opencsv.CSVReader;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -17,10 +19,6 @@ import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,17 +73,20 @@ public class quizController {
 
     private int score = 0;
 
-    public int getScore() {
-        return score;
-    }
-
     @FXML
     private void initialize() {
+        loadUserDetails();
         loadQuestions();
         showCurrentQuestion();
         initializeTimer();
         setDateLabel();
     }
+
+    private void loadUserDetails() {
+        name.setText(test.naam);
+        gender.setText(test.linga);
+    }
+
 
     public void startTimer() {
         timeline.play();
@@ -239,7 +240,6 @@ public class quizController {
         stage.setScene(scene);
         stage.show();
     }
-
 
 
     private void setDateLabel() {

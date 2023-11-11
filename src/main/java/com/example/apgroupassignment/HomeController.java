@@ -6,16 +6,24 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class HomeController {
 
-
+    @FXML
+    private Label username;
     @FXML
     private Button startQuizBtn;
 
+
     @FXML
-    private void initialize() {
+    private void initialize() throws IOException {
+
+        username.setText("Welcome "+ test.naam);
+
 
         startQuizBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -41,6 +49,10 @@ public class HomeController {
         });
 
     }
-    }
+
+
+
+}
+
 
 
