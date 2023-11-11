@@ -8,6 +8,7 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -72,7 +73,11 @@ public class quizController {
     @FXML
     private Label name, gender, date, timer, warn ;
 
-    public int score = 0;
+    private int score = 0;
+
+    public int getScore() {
+        return score;
+    }
 
     @FXML
     private void initialize() {
@@ -121,7 +126,7 @@ public class quizController {
 
     private void loadQuestions() {
         questionsWithOptions = new ArrayList<>();
-        try (InputStream inputStream = getClass().getResourceAsStream("/mcq.txt");
+        try (InputStream inputStream = getClass().getResourceAsStream("/questions_list.txt");
              BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
 
             br.lines()
@@ -217,14 +222,24 @@ public class quizController {
     }
 
     private void closeStage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("results.fxml"));
+        Parent root = fxmlLoader.load();
+
+        // Get the ResultController instance
+        ResultController resultController = fxmlLoader.getController();
+
+        // Set the score in ResultController
+        resultController.setScore(score);
+
         Stage currentStage = (Stage) next.getScene().getWindow();
         currentStage.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("results.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+
+        Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
     }
+
 
 
     private void setDateLabel() {
