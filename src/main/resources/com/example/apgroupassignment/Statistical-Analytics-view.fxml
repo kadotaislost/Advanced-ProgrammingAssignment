@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apgroupassignment.StatisticalAnalyticsViewController">
+   <children>
+      <AnchorPane prefHeight="502.0" prefWidth="771.0">
+         <children>
+            <Label layoutX="135.0" layoutY="137.0" text="Mean:" />
+            <Label fx:id="mean" layoutX="196.0" layoutY="137.0" text="123" />
+            <Label layoutX="135.0" layoutY="177.0" text="Median:" />
+            <Label fx:id="median" layoutX="196.0" layoutY="177.0" text="234" />
+            <Label layoutX="134.0" layoutY="215.0" text="mode:" />
+            <Label fx:id="mode" layoutX="189.0" layoutY="215.0" text="345" />
+            <Label layoutX="134.0" layoutY="251.0" text="Max Score:" />
+            <Label fx:id="max" layoutX="209.0" layoutY="251.0" text="100" />
+            <Label layoutX="135.0" layoutY="293.0" text="Min Score:" />
+            <Label fx:id="min" layoutX="209.0" layoutY="293.0" text="0" />
+            <Label layoutX="137.0" layoutY="330.0" text="Standard Deviation:" />
+            <Label fx:id="sd" layoutX="259.0" layoutY="330.0" text="12" />
+            <Label layoutX="207.0" layoutY="26.0" text="STASTICAL ANALYTICS">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

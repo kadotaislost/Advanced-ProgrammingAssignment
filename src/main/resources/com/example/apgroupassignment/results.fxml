@@ -6,18 +6,63 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apgroupassignment.ResultController">
    <children>
-      <AnchorPane prefHeight="502.0" prefWidth="768.0" style="-fx-background-color: FLORALWHITE;">
+      <AnchorPane fx:id="bg" prefHeight="502.0" prefWidth="768.0" style="-fx-background-color: #BCB6AD;">
          <children>
-            <Label layoutX="312.0" layoutY="46.0" text="RESULTS">
+            <Button fx:id="analysis" layoutX="295.0" layoutY="426.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="157.0" text="View Statistical Analytics" onAction="#viewStats"/>
+            <Label layoutX="312.0" layoutY="14.0" text="RESULTS" textFill="#413f3a">
                <font>
                   <Font name="Segoe UI Bold" size="29.0" />
                </font>
             </Label>
-            <Label fx:id="marks" alignment="CENTER" contentDisplay="CENTER" layoutX="219.0" layoutY="114.0" prefHeight="38.0" prefWidth="323.0" text="8/20">
+            <ChoiceBox fx:id="choiceBox" layoutX="296.0" layoutY="361.0" prefWidth="150.0" style="-fx-background-color: #9A9797;" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="134.0" layoutY="316.0" prefHeight="28.0" prefWidth="480.0" text="Select a Candidate to view their results">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="24.0" />
+                  <Font name="Eras Medium ITC" size="20.0" />
                </font>
             </Label>
+            <Label fx:id="error" alignment="CENTER" contentDisplay="CENTER" layoutX="147.0" layoutY="387.0" prefHeight="28.0" prefWidth="480.0" textFill="RED">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Label>
+            <Pane layoutX="232.0" layoutY="58.0" prefHeight="232.0" prefWidth="283.0" style="-fx-background-color: #F5F2F4;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="27.0" prefHeight="28.0" prefWidth="84.0" text="Name:">
+                     <font>
+                        <Font name="Fira Code Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="passOrFail" alignment="CENTER" contentDisplay="CENTER" layoutY="195.0" prefHeight="38.0" prefWidth="283.0" text="PASS">
+                     <font>
+                        <Font name="Segoe UI Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="75.0" prefHeight="28.0" prefWidth="90.0" text="Gender:">
+                     <font>
+                        <Font name="Fira Code Medium" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="122.0" prefHeight="28.0" prefWidth="84.0" text="Score:">
+                     <font>
+                        <Font name="Fira Code Medium" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="marks" contentDisplay="CENTER" layoutX="111.0" layoutY="117.0" prefHeight="38.0" prefWidth="61.0" text="8/20">
+                     <font>
+                        <Font name="Franklin Gothic Medium" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gender" contentDisplay="CENTER" layoutX="112.0" layoutY="75.0" prefHeight="28.0" prefWidth="120.0" text="Male">
+                     <font>
+                        <Font name="Fira Code Medium" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name" alignment="BOTTOM_LEFT" contentDisplay="CENTER" layoutX="112.0" layoutY="27.0" prefHeight="28.0" prefWidth="172.0" text="Ram">
+                     <font>
+                        <Font name="Fira Code Medium" size="20.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
          </children>
       </AnchorPane>
    </children>

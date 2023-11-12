@@ -33,7 +33,7 @@ public class HomeController {
                     Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                     thisstage.close();
 
-                    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("quiz.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("quiz.fxml"));
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
                     stage.setScene(scene);
@@ -48,7 +48,10 @@ public class HomeController {
             }
         });
 
+
     }
+
+
 
 
 

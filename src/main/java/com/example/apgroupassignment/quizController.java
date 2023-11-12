@@ -224,7 +224,7 @@ public class quizController {
     }
 
     private void closeStage() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("results.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("results.fxml"));
 
         Stage currentStage = (Stage) next.getScene().getWindow();
         currentStage.close();
