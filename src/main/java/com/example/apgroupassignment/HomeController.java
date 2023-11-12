@@ -22,7 +22,7 @@ public class HomeController {
     @FXML
     private void initialize() throws IOException {
 
-        username.setText("Welcome "+ test.naam);
+        username.setText("Welcome "+ CurrentUserDetails.naam);
 
 
         startQuizBtn.setOnAction(new EventHandler<ActionEvent>() {

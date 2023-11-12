@@ -1,6 +1,6 @@
 package com.example.apgroupassignment;
 
-public class test {
+public class CurrentUserDetails {
     public static String naam;
 
     public static String linga;
@@ -9,6 +9,7 @@ public class test {
 
     public static String nationality;
 
+    public static String email;
 
 
 

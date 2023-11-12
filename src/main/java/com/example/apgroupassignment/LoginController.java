@@ -19,18 +19,6 @@ public class LoginController {
     @FXML
     private Label resultLabel;
 
-    public String getName() {
-        return name;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    private String gender;
-
-    private String name;
-
     private Application application;
 
     public void setApplication(Application application){
@@ -40,10 +28,11 @@ public class LoginController {
         String email = userEmail.getText();
         String password = userPassword.getText();
         if (validateLogin(email, password)) {
-            test.naam = line[0];;
-            test.linga = line[3];
-            test.birthYear = line[2];
-            test.nationality = line[4];
+            CurrentUserDetails.naam = line[0];;
+            CurrentUserDetails.linga = line[3];
+            CurrentUserDetails.birthYear = line[2];
+            CurrentUserDetails.nationality = line[4];
+            CurrentUserDetails.email = line[1];
             application.homeScene();
         }
         else {

@@ -4,7 +4,6 @@ import java.io.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import com.opencsv.CSVReader;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -49,7 +48,7 @@ public class quizController {
 
     public boolean[] isAnswered = new boolean[20];
     private String selectedAnswer;
-    private int minutes = 1;
+    private int minutes = 5;
     private int seconds = 0;
     private Timeline timeline;
 
@@ -69,9 +68,9 @@ public class quizController {
     private Button prev, next;
 
     @FXML
-    private Label name, gender, date, timer, warn ;
+    private Label name, gender, date, timer, warn, nationality ;
 
-    private int score = 0;
+    public static int score = 0;
 
     @FXML
     private void initialize() {
@@ -83,8 +82,10 @@ public class quizController {
     }
 
     private void loadUserDetails() {
-        name.setText(test.naam);
-        gender.setText(test.linga);
+        name.setText(CurrentUserDetails.naam);
+        gender.setText(CurrentUserDetails.linga);
+        nationality.setText(CurrentUserDetails.nationality);
+
     }
 
 
@@ -224,18 +225,11 @@ public class quizController {
 
     private void closeStage() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("results.fxml"));
-        Parent root = fxmlLoader.load();
-
-        // Get the ResultController instance
-        ResultController resultController = fxmlLoader.getController();
-
-        // Set the score in ResultController
-        resultController.setScore(score);
 
         Stage currentStage = (Stage) next.getScene().getWindow();
         currentStage.close();
 
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
