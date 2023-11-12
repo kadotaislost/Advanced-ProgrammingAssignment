@@ -17,7 +17,7 @@ public class Application extends javafx.application.Application{
 
     public void registerScene() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("register-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 420);
+        Scene scene = new Scene(fxmlLoader.load());
 
         stage.setTitle("Register!");
         stage.setScene(scene);
