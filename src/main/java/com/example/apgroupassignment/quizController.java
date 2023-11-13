@@ -24,26 +24,26 @@ import java.util.List;
 public class quizController {
 
     String[] answers = {
-            "Kathmandu",
-            "Cow",
-            "Daura Suruwal",
-            "Rhododendron",
-            "Dhanyabad",
-            "Maya Devi Temple",
-            "Namaste",
-            "Himalayan Monal(Danphe)",
-            "Dal Bhat",
-            "Momo",
-            "Chitwan National Park",
-            "Tribhuvan International Airport",
-            "Tihar",
-            "Kukur Tihar",
-            "aila",
-            "Buddha Jayanti",
-            "Sarangi",
-            "Rangoli",
-            "lakhey Dance",
-            "Dashain"
+            "Kuala Lumpur",
+            "Marina Bay Sands",
+            "Khon",
+            "Hari Raya Aidilfitri",
+            "Singapore",
+            "Pad Thai",
+            "Chao Phraya River",
+            "Malay",
+            "Malaysia",
+            "Peranakan Dance",
+            "Songkran",
+            "Kuala Lumpur",
+            "Sawadee Ka",
+            "Langkawi",
+            "Orchard Road",
+            "April",
+            "August 31, 1957",
+            "Wat Pho",
+            "Silat",
+            "Baht"
     };
 
     public boolean[] isAnswered = new boolean[20];

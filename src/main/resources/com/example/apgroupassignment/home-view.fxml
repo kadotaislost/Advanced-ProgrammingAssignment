@@ -27,9 +27,9 @@
                   <Image url="@../../../pictures/boudhha.jpeg" />
                </image>
             </ImageView>
-            <Label layoutX="7.0" layoutY="14.0" prefHeight="34.0" prefWidth="375.0" text="NEPAL CITIZENSHIP QUIZ">
+            <Label layoutX="13.0" layoutY="14.0" prefHeight="34.0" prefWidth="375.0" text="MASATHAI CITIZENSHIP  QUIZ">
                <font>
-                  <Font name="Franklin Gothic Heavy" size="31.0" />
+                  <Font name="Franklin Gothic Heavy" size="27.0" />
                </font>
             </Label>
             <Button fx:id="startQuizBtn" layoutX="143.0" layoutY="398.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="114.0" style="-fx-background-color: LIMEGREEN;" text="START">

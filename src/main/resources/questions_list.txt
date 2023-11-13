@@ -1,20 +1,20 @@
-1) What is the capital city of Nepal?|Kathmandu|Pokhara|Lumbini|Bhaktapur
-2) Which animal is considered sacred and the national symbol of Nepal?|Cow|Elephant|Monkey|tiger
-3) What is the traditional dress worn by men in Nepal?|Sari|Kimono|Daura Suruwal|Kilt
-4) What is the name of the national flower of Nepal?|Rose|Marigold|Rhododendron|Lotus
-5) In Nepali culture, what do people commonly say instead of "Thank you" when expressing gratitude?|Namaste|Dhanyabad|Shukriya|Kripaya
-6) Which historical site in Lumbini, Nepal, is believed to be the birthplace of Lord Buddha?|Maya Devi Temple|Swayambhunath Stupa|Pashupatinath Temple|Boudhanath Stupa
-7) What is the traditional Nepali method of greeting, which involves placing one's palms together and bowing the head slightly?|Handshake|Fist bump|High-five|Namaste
-8) What is the national bird of Nepal, known for its vibrant and colorful plumage?|Peacock|Sparrow|Pigeon|Himalayan Monal(Danphe)
-9) What is the national dish of Nepal, which is made from lentils and served with rice and various accompaniments?|Momos|Dal Bhat|Ghee|Roti
-10) What is the name of the traditional Nepali dumpling, often served with achar?|Sushi|Dim Sum|Momo|Empanada
-11) Which famous national park in Nepal is known for its diverse wildlife, including Bengal tigers and one-horned rhinoceros?|Annapurna Conservation Area|Langtang National Park|Chitwan National Park|Sagarmatha National Park
-12) Which is Nepal's only international airport and serves as the gateway for travelers arriving in the country?|Tribhuvan International Airport|Lukla Airport|Pokhara Airport|Bharatpur Airport
-13) Which festival is known as the "Festival of Lights" celebrated in Nepal?|Dashain|Tihar|Holi|Diwali
-14) Which Nepali festival marks the worship of dogs and is celebrated to honor the role of dogs in human life?|Holi|Dashain|Indra Jatra|Kukur Tihar
-15) What is the traditional Newari rice wine often consumed during festivals and celebrations in Nepal?|Sake|aila|Tequila|soju
-16) Which religious festival in Nepal marks the celebration of the Buddha's birth, enlightenment, and death?|Holi|Dashain|Buddha Jayanti|Diwali
-17) What is the name of the traditional Nepali wooden three-stringed instrument played with a bow, often used in folk music?|Tabla|Sitar|Sarangi|Didgeridoo
-18) In Nepali culture, what is the colorful and decorative structure constructed during the festival of Tihar to welcome the goddess of wealth, Laxmi?|Rangoli|Stupa|Mandala|Ghar
-19) What is the traditional dance form in Nepal that features performers wearing elaborate masks and is often associated with the Newar community?|Bharatanatyam|Kathak|Ghode Jatra|lakhey Dance
-20) In Nepal, during which festival do people traditionally fly kites?|Dashain|Indra Jatra|Holi|Tihar
+1. What is the capital city of Malaysia?|Bangkok|Kuala Lumpur|Singapore|Jakarta
+2. Which landmark is a symbol of Singapore and known for its iconic skyline?|Petronas Towers|Merlion|Wat Pho|Marina Bay Sands
+3. What is the traditional Thai dance often performed at festivals and celebrations?|Silat|Wayang Kulit|Khon|Hula
+4. Which Malaysian festival is celebrated with colorful processions and traditional performances?|Diwali|Hari Raya Aidilfitri|Songkran|Thaipusam
+5. The Merlion, a mythical creature with the head of a lion and the body of a fish, is a symbol of:|Malaysia|Thailand|Singapore|Indonesia
+6. What is the national dish of Thailand, known for its combination of sweet, sour, salty, and spicy flavors?|Sushi|Pad Thai|Laksa|Tom Yum
+7. Which river is considered the lifeblood of Bangkok, the capital city of Thailand?|Mekong River|Chao Phraya River|Irrawaddy River|Ayeyarwady River
+8. What is the official language of Malaysia?|Thai|Malay|Mandarin|Tamil
+9. The historic city of Malacca, a UNESCO World Heritage Site, is located in which country?|Malaysia|Singapore|Thailand|Indonesia
+10. What is the traditional dance form in Singapore that involves the balancing of pots on the head?|Bhangra|Lion Dance|Silat|Peranakan Dance
+11. Which Thai festival is known for the water fights that take place on the streets?|Loy Krathong|Songkran|Yi Peng|Phi Ta Khon
+12. The Batu Caves, a popular tourist attraction, are located near which Malaysian city?|Penang|Kuala Lumpur|Johor Bahru|Kuching
+13. The traditional Thai greeting, where one places their palms together and bows slightly, is called:|Sawadee Ka|Namaste|Selamat Pagi|Ayubowan
+14. Which Malaysian island is famous for its clear waters, coral reefs, and vibrant marine life?|Langkawi|Tioman|Pangkor|Redang
+15. In Singapore, what is the name of the famous shopping street known for its luxury brands and upscale boutiques?|Orchard Road|Haji Lane|Chinatown Street Market|Little India
+16. The traditional Thai New Year is celebrated during which month?|January|April|July|October
+17. Malaysia gained independence from British rule on which date?|August 31, 1957|July 4, 1776|September 16, 1963|March 25, 1942
+18. Which famous Thai temple is known for its large reclining Buddha statue?|Wat Arun|Wat Pho|Wat Saket|Wat Benchamabophit
+19. The traditional Malay art of self-defense, often accompanied by rhythmic movements, is called:|Capoeira|Kalaripayattu|Silat|Muay Thai
+20. What is the currency used in Thailand?|Baht|Ringgit|Rupiah|Kyat
