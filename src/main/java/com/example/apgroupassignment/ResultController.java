@@ -28,13 +28,14 @@ public class ResultController {
     public Label mean, median, mode, max, min, sd;
     @FXML
     public Button Home;
+
     @FXML
     private ChoiceBox<String> choiceBox;
 
     private String passFail;
 
     @FXML
-    private Label marks, name, gender, error;
+    private Label marks, name, gender, error,username;
 
     @FXML
     public void initialize() {
@@ -46,6 +47,7 @@ public class ResultController {
             passOrFail.setText("-");
             name.setText("-");
             gender.setText("-");
+            username.setText("-");
 
         }
         quizController.isQuizCompleted = false;
@@ -66,7 +68,7 @@ public class ResultController {
             List<String[]> records = reader.readAll();
 
             for (String[] record : records) {
-                if (record[0].equals(selectedName)) {
+                if (record[5].equals(selectedName)) {
                     if (record[4].equals("Pass")) {
                         passOrFail.setStyle("-fx-background-color: #71c765");
                         passOrFail.setText("Pass");
@@ -96,13 +98,13 @@ public class ResultController {
         try (CSVReader reader = new CSVReader(new FileReader(csvPath))) {
             List<String[]> records = reader.readAll();
 
-            List<String> names = new ArrayList<>();
+            List<String> usernames = new ArrayList<>();
             for (String[] record : records) {
-                names.add(record[0]);
+                usernames.add(record[5]);
             }
 
             // Populate the ChoiceBox with names
-            choiceBox.setItems(FXCollections.observableArrayList(names));
+            choiceBox.setItems(FXCollections.observableArrayList(usernames));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -122,12 +124,13 @@ public class ResultController {
         marks.setText(quizController.score + "/20");
         name.setText(CurrentUserDetails.naam);
         gender.setText(CurrentUserDetails.linga);
+        username.setText(CurrentUserDetails.username);
         String pathToCSV = "src/main/resources/test_result.csv";
         try {
             FileWriter fileWriter = new FileWriter(pathToCSV, true);
             CSVWriter csvWriter = new CSVWriter(fileWriter);
 
-            String[] csvData = {CurrentUserDetails.naam, CurrentUserDetails.linga, Integer.toString(quizController.score), CurrentUserDetails.email, passFail};
+            String[] csvData = {CurrentUserDetails.naam, CurrentUserDetails.linga, Integer.toString(quizController.score), CurrentUserDetails.email, passFail, CurrentUserDetails.username};
             csvWriter.writeNext(csvData);
             csvWriter.close();
         } catch (IOException e) {

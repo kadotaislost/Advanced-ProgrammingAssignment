@@ -33,6 +33,7 @@ public class LoginController {
             CurrentUserDetails.birthYear = line[2];
             CurrentUserDetails.nationality = line[4];
             CurrentUserDetails.email = line[1];
+            CurrentUserDetails.username = line[6];
             application.homeScene();
         }
         else {
@@ -47,7 +48,7 @@ public class LoginController {
         try (CSVReader reader = new CSVReader(new FileReader(csvPath))) {
 
             while ((line = reader.readNext()) != null){
-                if (line.length == 6 && line[1].equals(email) && line[5].equals(password)){
+                if (line.length == 7 && (line[1].equals(email) || line[6].equals(email)) && line[5].equals(password)){
 
 
                     return true;

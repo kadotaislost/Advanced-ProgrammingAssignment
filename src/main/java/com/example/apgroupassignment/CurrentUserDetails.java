@@ -11,6 +11,9 @@ public class CurrentUserDetails {
 
     public static String email;
 
+    public static String username;
+
+
 
 
 

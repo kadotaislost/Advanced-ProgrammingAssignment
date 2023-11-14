@@ -16,7 +16,7 @@ public class RegisterController {
 
     public String pathToCSV = "src/main/resources/userDetails.csv";
     @FXML
-    private TextField userName;
+    private TextField userName,user;
     @FXML
     private TextField userEmail;
     @FXML
@@ -26,7 +26,10 @@ public class RegisterController {
     @FXML
     private TextField userNationality;
     @FXML
-    private PasswordField userPassword;
+    private PasswordField userPassword,confirmPassword;
+
+    @FXML
+    private Label error;
 
     private Application application;
 
@@ -35,6 +38,7 @@ public class RegisterController {
     }
     public void register(){
         String name = userName.getText();
+        String username = user.getText();
         String email = userEmail.getText();
         String birthYear = dateOfBirth.getValue().toString();
         String gender = userGender.getValue();
@@ -46,7 +50,7 @@ public class RegisterController {
                 FileWriter fileWriter = new FileWriter(pathToCSV, true);
                 CSVWriter csvWriter = new CSVWriter(fileWriter);
 
-                String[] csvData = {name, email, birthYear, gender, nationality, password};
+                String[] csvData = {name, email, birthYear, gender, nationality, password,username};
                 csvWriter.writeNext(csvData);
                 csvWriter.close();
                 application.loginScene();
@@ -59,7 +63,30 @@ public class RegisterController {
     }
 
     private boolean verifyRegister(){
-        return checkAllFieldsFilled() && checkEmailRegisteredOrNot(userEmail.getText());
+        return checkAllFieldsFilled() && checkEmailRegisteredOrNot(userEmail.getText()) && checkPasswordMatched() && checkUsernameRegisteredOrNot(user.getText());
+    }
+
+    private boolean checkUsernameRegisteredOrNot(String username) {
+        try (CSVReader reader = new CSVReader(new FileReader(pathToCSV))) {
+            String[] line;
+            while ((line = reader.readNext()) != null) {
+                if (username.equals(line[6])) {
+                    error.setText("Username already registered");
+                    return false;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
+    private boolean checkPasswordMatched() {
+        if (userPassword.getText().equals(confirmPassword.getText())) {
+            return true;
+        }
+        error.setText("Password does not match");
+        return false;
     }
 
     private boolean checkAllFieldsFilled() {
@@ -69,9 +96,11 @@ public class RegisterController {
         String gender = userGender.getValue();
         String nationality = userNationality.getText();
         String password = userPassword.getText();
+        String confPwd = confirmPassword.getText();
+        String username = user.getText();
 
-        if(name.equals("") || email.equals("") || birthYear.equals("") || gender.equals("") || nationality.equals("") || password.equals("")){
-            System.out.println("Please fill all the fields requested");
+        if(name.equals("") || email.equals("") || birthYear.equals("") || gender.equals("") || nationality.equals("") || password.equals("") || confPwd.equals("") || username.equals("")){
+            error.setText("Please fill all the fields");
             return false;
         }
         return true;
@@ -82,7 +111,7 @@ public class RegisterController {
             String[] line;
             while ((line = reader.readNext()) != null) {
                 if (email.equals(line[1])) {
-                    System.out.println("Email already registered");
+                    error.setText("Email already registered");
                     return false;
                 }
             }
