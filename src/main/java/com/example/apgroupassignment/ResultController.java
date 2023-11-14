@@ -80,6 +80,7 @@ public class ResultController {
                     marks.setText(record[2] + "/20");
                     name.setText(record[0]);
                     gender.setText(record[1]);
+                    username.setText(record[5]);
                     return;
                 }
             }
