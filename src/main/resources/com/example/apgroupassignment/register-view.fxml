@@ -8,62 +8,84 @@
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="469.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apgroupassignment.RegisterController">
    <children>
-      <AnchorPane prefHeight="607.0" prefWidth="470.0" style="-fx-background-color: #FAF9F6;">
+      <AnchorPane prefHeight="607.0" prefWidth="470.0" style="-fx-background-color: #D6C9C0;">
          <children>
-            <DatePicker fx:id="dateOfBirth" layoutX="194.0" layoutY="215.0" styleClass="input-field" />
-            <Label layoutX="97.0" layoutY="139.0" styleClass="input-label" text="Name">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <TextField fx:id="userName" layoutX="193.0" layoutY="135.0" prefHeight="26.0" prefWidth="175.0" styleClass="input-field" />
-            <Label layoutX="166.0" layoutY="74.0" prefHeight="32.0" prefWidth="153.0" styleClass="h2-label" text="Register Page">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </Label>
-            <Label layoutX="99.0" layoutY="178.0" styleClass="input-label" text="Email">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <TextField fx:id="userEmail" layoutX="194.0" layoutY="174.0" prefHeight="26.0" prefWidth="173.0" styleClass="input-field" />
-            <Label layoutX="96.0" layoutY="219.0" prefHeight="20.0" prefWidth="65.0" styleClass="input-label" text="Birth Year">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <Label layoutX="97.0" layoutY="266.0" prefHeight="18.0" prefWidth="50.0" styleClass="input-label" text="Gender">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <ComboBox fx:id="userGender" layoutX="195.0" layoutY="262.0" prefHeight="26.0" prefWidth="175.0" promptText="---Select Your Gender---" styleClass="input-field">
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                        <String fx:value="Male" />
-                        <String fx:value="Female" />
-                        <String fx:value="Others" />
-                    </FXCollections>
-                </items>
-            </ComboBox>
-            <Label layoutX="93.0" layoutY="312.0" styleClass="input-label" text="Nationality">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <TextField fx:id="userNationality" layoutX="193.0" layoutY="309.0" prefHeight="26.0" prefWidth="175.0" styleClass="input-field" />
-            <Label layoutX="97.0" layoutY="356.0" styleClass="input-label" text="Password">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <PasswordField fx:id="userPassword" layoutX="194.0" layoutY="353.0" prefHeight="26.0" prefWidth="175.0" styleClass="input-field" />
-             <Button fx:id="registerBtn" layoutX="198.0" layoutY="412.0" onAction="#register" style="-fx-cursor: hand; -fx-background-color: #5667ec;" styleClass="btn btn-primary" text="Register" textFill="WHITE">
+             <Button fx:id="registerBtn" layoutX="187.0" layoutY="520.0" onAction="#register" style="-fx-cursor: hand; -fx-background-color: #3F3F3F;" styleClass="btn btn-primary" text="Register" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Label layoutX="147.0" layoutY="459.0" prefHeight="0.0" prefWidth="135.0" text="Already have an account?" />
-            <Button fx:id="loginSceneBtn" layoutX="272.0" layoutY="454.0" mnemonicParsing="false" onAction="#loginScenebtn" prefHeight="27.0" prefWidth="58.0" style="-fx-cursor: hand; -fx-background-color: transparent;" styleClass="input-field" text="Log In" textFill="#4000ff" underline="true">
+            <Label layoutX="134.0" layoutY="555.0" prefHeight="0.0" prefWidth="135.0" text="Already have an account?" />
+            <Button fx:id="loginSceneBtn" layoutX="261.0" layoutY="550.0" mnemonicParsing="false" onAction="#loginScenebtn" prefHeight="27.0" prefWidth="58.0" style="-fx-cursor: hand; -fx-background-color: transparent;" styleClass="input-field" text="Log In" textFill="#000ac9" underline="true">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
+            <Label layoutX="157.0" layoutY="31.0" prefHeight="35.0" prefWidth="163.0" styleClass="h2-label" text="Register Page">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Pane layoutX="-1.0" layoutY="90.0" prefHeight="406.0" prefWidth="480.0" style="-fx-background-color: #A89893;">
+               <children>
+                  <PasswordField layoutX="196.0" layoutY="350.0" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: #FAF9F6;" />
+                  <TextField fx:id="userName" layoutX="196.0" layoutY="21.0" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: #FAF9F6;" styleClass="input-field" />
+                  <DatePicker fx:id="dateOfBirth" layoutX="196.0" layoutY="169.0" style="-fx-background-image: #FAF9F6;" styleClass="input-field" />
+                  <Label layoutX="59.0" layoutY="24.0" styleClass="input-label" text="Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="60.0" layoutY="127.0" styleClass="input-label" text="Email">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="userEmail" layoutX="197.0" layoutY="124.0" prefHeight="26.0" prefWidth="173.0" style="-fx-background-color: #FAF9F6;" styleClass="input-field" />
+                  <Label layoutX="60.0" layoutY="171.0" prefHeight="20.0" prefWidth="65.0" styleClass="input-label" text="Birth Year">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="60.0" layoutY="219.0" prefHeight="18.0" prefWidth="50.0" styleClass="input-label" text="Gender">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="userGender" layoutX="196.0" layoutY="216.0" prefHeight="26.0" prefWidth="175.0" promptText="---Select Your Gender---" styleClass="input-field">
+                      <items>
+                          <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Male" />
+                              <String fx:value="Female" />
+                              <String fx:value="Others" />
+                          </FXCollections>
+                      </items>
+                  </ComboBox>
+                  <Label layoutX="59.0" layoutY="263.0" styleClass="input-label" text="Nationality">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="userNationality" layoutX="196.0" layoutY="260.0" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: #FAF9F6;" styleClass="input-field" />
+                  <Label layoutX="56.0" layoutY="308.0" styleClass="input-label" text="Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="userPassword" layoutX="196.0" layoutY="305.0" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: #FAF9F6;" styleClass="input-field" />
+                  <Label layoutX="54.0" layoutY="79.0" text="Username">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="196.0" layoutY="74.0" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: #FAF9F6;" />
+                  <Label layoutX="54.0" layoutY="357.0" text="Confirm Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
    </children>
