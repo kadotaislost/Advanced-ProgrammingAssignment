@@ -23,7 +23,7 @@
                   <Font name="Franklin Gothic Heavy" size="27.0" />
                </font>
             </Label>
-            <Button fx:id="startQuizBtn" layoutX="314.0" layoutY="412.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="114.0" style="-fx-background-color: LIMEGREEN;" text="START">
+            <Button fx:id="startQuizBtn" layoutX="386.0" layoutY="412.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="114.0" style="-fx-background-color: LIMEGREEN;" text="START">
                <font>
                   <Font name="Arial Rounded MT Bold" size="23.0" />
                </font>
@@ -33,7 +33,7 @@
                   <Font name="Arial" size="22.0" />
                </font>
             </Label>
-            <Button fx:id="result" layoutX="138.0" layoutY="416.0" mnemonicParsing="false" onAction="#viewResults" text="Results" />
+            <Button fx:id="result" layoutX="262.0" layoutY="429.0" mnemonicParsing="false" onAction="#viewResults" text="Results" />
             <ImageView fitHeight="233.0" fitWidth="233.0" layoutX="272.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../pictures/singaporeflag.png" />
