@@ -6,47 +6,47 @@
 <?import javafx.scene.text.*?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apgroupassignment.HomeController">
-   <children>
-      <AnchorPane prefHeight="502.0" prefWidth="798.0" style="-fx-background-color: #D6C9C0;">
-         <children>
-            <Button fx:id="startQuizBtn" layoutX="395.0" layoutY="417.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="118.0" style="-fx-background-color: #3F3F3F;" text="START" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="19.0" />
-               </font>
-            </Button>
-            <Button fx:id="result" layoutX="245.0" layoutY="417.0" mnemonicParsing="false" onAction="#viewResults" prefHeight="58.0" prefWidth="117.0" style="-fx-background-color: #3F3F3F;" text="RESULTS" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="19.0" />
-               </font></Button>
-            <Label layoutX="129.0" layoutY="41.0" prefHeight="40.0" prefWidth="493.0" text="MASATHAI CITIZENSHIP QUIZ ">
-               <font>
-                  <Font name="Franklin Gothic Heavy" size="35.0" />
-               </font>
-            </Label>
-            <Pane layoutY="119.0" prefHeight="263.0" prefWidth="751.0" style="-fx-background-color: #3F3F3F;">
-               <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="40.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../pictures/malaysiaflag.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="223.0" fitWidth="233.0" layoutX="284.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../pictures/singaporeflag.png" />
-                     </image>
-                  </ImageView>
-                  <Label fx:id="username" alignment="CENTER" layoutX="216.0" layoutY="206.0" prefHeight="43.0" prefWidth="319.0" text="WELCOME USER!" textFill="WHITE">
-                     <font>
-                        <Font name="Arial" size="22.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="246.0" fitWidth="233.0" layoutX="542.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../pictures/thaiflaag3.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
-         </children></AnchorPane>
-   </children>
+    <children>
+        <AnchorPane prefHeight="502.0" prefWidth="798.0" style="-fx-background-color: #D6C9C0;">
+            <children>
+                <Button fx:id="startQuizBtn" layoutX="395.0" layoutY="417.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="118.0" style="-fx-background-color: #3F3F3F;" text="START" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="19.0" />
+                    </font>
+                </Button>
+                <Button fx:id="result" layoutX="245.0" layoutY="417.0" mnemonicParsing="false" onAction="#viewResults" prefHeight="58.0" prefWidth="117.0" style="-fx-background-color: #3F3F3F;" text="RESULTS" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="19.0" />
+                    </font></Button>
+                <Label layoutX="129.0" layoutY="41.0" prefHeight="40.0" prefWidth="493.0" text="MASATHAI CITIZENSHIP QUIZ ">
+                    <font>
+                        <Font name="Franklin Gothic Heavy" size="35.0" />
+                    </font>
+                </Label>
+                <Pane layoutY="119.0" prefHeight="263.0" prefWidth="751.0" style="-fx-background-color: #3F3F3F;">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="40.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../pictures/malaysiaflag.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="223.0" fitWidth="233.0" layoutX="284.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../pictures/singaporeflag.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="username" alignment="CENTER" layoutX="216.0" layoutY="206.0" prefHeight="43.0" prefWidth="319.0" text="WELCOME USER!" textFill="WHITE">
+                            <font>
+                                <Font name="Arial" size="22.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="246.0" fitWidth="233.0" layoutX="542.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../pictures/thaiflaag3.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </children></AnchorPane>
+    </children>
 </HBox>
