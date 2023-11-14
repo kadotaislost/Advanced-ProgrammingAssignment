@@ -24,7 +24,7 @@ public class LoginController {
     public void setApplication(Application application){
         this.application = application;
     }
-    public void login(ActionEvent event) throws IOException {
+    public void login() throws IOException {
         String email = userEmail.getText();
         String password = userPassword.getText();
         if (validateLogin(email, password)) {

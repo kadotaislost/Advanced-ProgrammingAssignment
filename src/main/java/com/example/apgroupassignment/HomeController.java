@@ -16,7 +16,7 @@ public class HomeController {
     @FXML
     private Label username;
     @FXML
-    private Button startQuizBtn;
+    private Button startQuizBtn,result;
 
 
     @FXML
@@ -52,9 +52,21 @@ public class HomeController {
     }
 
 
+    public void viewResults() {
+        try {
+            Stage thisStage = (Stage) result.getScene().getWindow();
+            thisStage.close();
 
+            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("results.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
 
-
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 

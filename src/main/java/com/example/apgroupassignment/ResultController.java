@@ -23,10 +23,11 @@ import java.util.stream.Collectors;
 public class ResultController {
 
     public Label passOrFail;
-    public Button analysis;
 
     @FXML
     public Label mean, median, mode, max, min, sd;
+    @FXML
+    public Button Home;
     @FXML
     private ChoiceBox<String> choiceBox;
 
@@ -37,7 +38,17 @@ public class ResultController {
 
     @FXML
     public void initialize() {
-        displayAndStoreResult();
+        if(quizController.isQuizCompleted){
+            displayAndStoreResult();
+        }
+        else{
+            marks.setText("-");
+            passOrFail.setText("-");
+            name.setText("-");
+            gender.setText("-");
+
+        }
+        quizController.isQuizCompleted = false;
         loadChoiceBox();
         choiceBox.setOnAction(event -> {
             String selectedName = choiceBox.getValue();
@@ -45,6 +56,8 @@ public class ResultController {
         });
         viewStats();
     }
+
+
 
     private void displayMarks(String selectedName) {
         String csvPath = "src/main/resources/test_result.csv";
@@ -202,6 +215,23 @@ public class ResultController {
         double sum = scores.stream().mapToDouble(score -> Math.pow(score - mean, 2)).sum();
         double variance = sum / scores.size();
         return Math.sqrt(variance);
+    }
+
+    public void viewHome() {
+
+        try {
+            Stage thisStage = (Stage) Home.getScene().getWindow();
+            thisStage.close();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("home-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 

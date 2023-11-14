@@ -23,6 +23,8 @@ import java.util.List;
 
 public class quizController {
 
+    public static boolean isQuizCompleted = false;
+
     String[] answers = {
             "Kuala Lumpur",
             "Marina Bay Sands",
@@ -228,6 +230,7 @@ public class quizController {
 
         Stage currentStage = (Stage) next.getScene().getWindow();
         currentStage.close();
+        isQuizCompleted = true;
 
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();

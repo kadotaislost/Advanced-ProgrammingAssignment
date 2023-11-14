@@ -74,6 +74,7 @@
             <Label fx:id="max" layoutX="115.0" layoutY="233.0" text="5" />
             <Label layoutX="49.0" layoutY="269.0" text="Min Score:" />
             <Label fx:id="min" layoutX="115.0" layoutY="269.0" text="6" />
+            <Button fx:id="Home" layoutX="168.0" layoutY="396.0" mnemonicParsing="false" text="Home" onAction="#viewHome"/>
          </children></AnchorPane>
    </children>
 </HBox>

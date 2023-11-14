@@ -32,7 +32,7 @@
                   <Font name="Franklin Gothic Heavy" size="27.0" />
                </font>
             </Label>
-            <Button fx:id="startQuizBtn" layoutX="143.0" layoutY="398.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="114.0" style="-fx-background-color: LIMEGREEN;" text="START">
+            <Button fx:id="startQuizBtn" layoutX="253.0" layoutY="399.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="114.0" style="-fx-background-color: LIMEGREEN;" text="START">
                <font>
                   <Font name="Arial Rounded MT Bold" size="23.0" />
                </font>
@@ -42,6 +42,7 @@
                   <Font name="Arial" size="22.0" />
                </font>
             </Label>
+            <Button fx:id="result" layoutX="140.0" layoutY="416.0" mnemonicParsing="false" text="Results" onAction="#viewResults"/>
          </children></AnchorPane>
    </children>
 </HBox>

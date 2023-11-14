@@ -8,7 +8,6 @@ import java.io.IOException;
 
 public class Application extends javafx.application.Application{
     private Stage stage;
-
     @Override
     public void start(Stage stage) throws Exception {
         this.stage = stage;
