@@ -39,6 +39,15 @@ public class Application extends javafx.application.Application{
         loginController.setApplication(this);
     }
 
+    public void homeScene(String name) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("home-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        stage.setTitle("Quiz App");
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public static void main(String[] args) {
         launch();
     }

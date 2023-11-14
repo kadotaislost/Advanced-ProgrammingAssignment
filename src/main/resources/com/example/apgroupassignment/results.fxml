@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apgroupassignment.ResultController">
+   <children>
+      <AnchorPane prefHeight="502.0" prefWidth="768.0" style="-fx-background-color: FLORALWHITE;">
+         <children>
+            <Label layoutX="312.0" layoutY="46.0" text="RESULTS">
+               <font>
+                  <Font name="Segoe UI Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="marks" alignment="CENTER" contentDisplay="CENTER" layoutX="417.0" layoutY="118.0" prefHeight="38.0" prefWidth="59.0" text="8/20">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="marks1" alignment="CENTER" contentDisplay="CENTER" layoutX="256.0" layoutY="118.0" prefHeight="38.0" prefWidth="150.0" text="you scored ">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

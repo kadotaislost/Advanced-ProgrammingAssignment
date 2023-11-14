@@ -21,6 +21,13 @@ public class LoginController {
 
     private Application application;
 
+    public String getName() {
+        return name;
+    }
+
+    private String name;
+
+
     public void setApplication(Application application){
         this.application = application;
     }
@@ -31,7 +38,8 @@ public class LoginController {
             resultLabel.setText("Login Successful!!!");
             resultLabel.getStyleClass().clear();
             resultLabel.getStyleClass().add("Login-Success");
-            application.registerScene();
+
+            application.homeScene(name);
         }
         else {
             resultLabel.setText("Invalid Email or Password");
@@ -46,6 +54,7 @@ public class LoginController {
             String[] line;
             while ((line = reader.readNext()) != null){
                 if (line.length == 6 && line[1].equals(email) && line[5].equals(password)){
+                    name = line[0];
                     return true;
                 }
             }
