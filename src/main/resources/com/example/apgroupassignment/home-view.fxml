@@ -9,13 +9,16 @@
    <children>
       <AnchorPane prefHeight="502.0" prefWidth="798.0" style="-fx-background-color: #D6C9C0;">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true" />
-            <Label alignment="CENTER" layoutX="299.0" layoutY="384.0" text="click the start button to start the quiz">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="38.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../pictures/malaysiaflag.png" />
+               </image></ImageView>
+            <Label alignment="CENTER" layoutX="299.0" layoutY="392.0" text="click the start button to start the quiz">
                <font>
                   <Font name="Arial" size="9.0" />
                </font>
             </Label>
-            <Label layoutX="145.0" layoutY="44.0" prefHeight="34.0" prefWidth="151.0" text="MASATHAI ">
+            <Label layoutX="198.0" layoutY="42.0" prefHeight="34.0" prefWidth="381.0" text="MASATHAI CITIZENSHIP QUIZ ">
                <font>
                   <Font name="Franklin Gothic Heavy" size="27.0" />
                </font>
@@ -31,26 +34,14 @@
                </font>
             </Label>
             <Button fx:id="result" layoutX="138.0" layoutY="416.0" mnemonicParsing="false" onAction="#viewResults" text="Results" />
-            <Label layoutX="284.0" layoutY="44.0" prefHeight="34.0" prefWidth="160.0" text="CITIZENSHIP">
-               <font>
-                  <Font name="Franklin Gothic Heavy" size="27.0" />
-               </font>
-            </Label>
-            <Label layoutX="453.0" layoutY="44.0" prefHeight="34.0" prefWidth="63.0" text="QUIZ">
-               <font>
-                  <Font name="Franklin Gothic Heavy" size="27.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="233.0" fitWidth="233.0" layoutX="284.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="233.0" fitWidth="233.0" layoutX="272.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="C:\Java 5th\Advanced-ProgrammingAssignment\src\main\resources\pictures\singaporeflag.png" />
-               </image>
-            </ImageView>
+                  <Image url="@../../../pictures/singaporeflag.png" />
+               </image></ImageView>
             <ImageView fitHeight="246.0" fitWidth="233.0" layoutX="517.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="C:\Java 5th\Advanced-ProgrammingAssignment\src\main\resources\pictures\thaiflaag3.png" />
-               </image>
-            </ImageView>
+                  <Image url="@../../../pictures/thaiflaag3.png" />
+               </image></ImageView>
          </children></AnchorPane>
    </children>
 </HBox>
