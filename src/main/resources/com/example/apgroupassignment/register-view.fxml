@@ -30,7 +30,7 @@
                <children>
                   <PasswordField layoutX="196.0" layoutY="350.0" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: #FAF9F6;" />
                   <TextField fx:id="userName" layoutX="196.0" layoutY="21.0" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: #FAF9F6;" styleClass="input-field" />
-                  <DatePicker fx:id="dateOfBirth" layoutX="196.0" layoutY="169.0" style="-fx-background-image: #FAF9F6;" styleClass="input-field" />
+                  <DatePicker fx:id="dateOfBirth" layoutX="196.0" layoutY="169.0" style="-fx-background-color: #FAF9F6;" styleClass="input-field" />
                   <Label layoutX="59.0" layoutY="24.0" styleClass="input-label" text="Name">
                      <font>
                         <Font size="14.0" />
