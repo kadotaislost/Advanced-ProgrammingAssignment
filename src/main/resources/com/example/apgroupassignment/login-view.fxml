@@ -1,40 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" spacing="20.0" style="-fx-background-color: #FAF9F6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apgroupassignment.LoginController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="685.0" spacing="20.0" style="-fx-background-color: #FAF9F6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apgroupassignment.LoginController">
    <children>
-      <Label text="Login Page">
-         <font>
-            <Font name="System Bold" size="22.0" />
-         </font></Label>
-      <HBox alignment="CENTER" spacing="10.0">
+      <AnchorPane prefHeight="567.0" prefWidth="686.0" style="-fx-background-color: white;">
          <children>
-            <Label styleClass="input-label" text="UserEmail" />
-            <TextField fx:id="userEmail" styleClass="input-field" />
+            <Pane layoutX="309.0" prefHeight="483.0" prefWidth="377.0" style="-fx-background-color: #D6C9C0;">
+               <children>
+                  <Label layoutX="63.0" layoutY="218.0" text="Password ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="userEmail" layoutX="148.0" layoutY="151.0" prefHeight="26.0" prefWidth="192.0" promptText="Username or Email" styleClass="input-field" />
+                  <Label layoutX="63.0" layoutY="151.0" styleClass="input-label" text="Username">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="userPassword" layoutX="148.0" layoutY="217.0" prefHeight="26.0" prefWidth="192.0" promptText="Password" />
+                  <Label layoutX="98.0" layoutY="363.0" text="Don't have an account yet?" />
+                  <Label fx:id="resultLabel" alignment="CENTER" layoutX="108.0" layoutY="336.0" prefHeight="17.0" prefWidth="172.0" styleClass="test" />
+                  <Button layoutX="241.0" layoutY="358.0" mnemonicParsing="false" onAction="#registerScenebtn" prefHeight="18.0" prefWidth="68.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Register" textFill="#5667ec" underline="true">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="135.0" layoutY="50.0" text="LOGIN">
+                     <font>
+                        <Font name="System Bold" size="38.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="162.0" layoutY="284.0" mnemonicParsing="false" onAction="#login" prefHeight="36.0" prefWidth="79.0" style="-fx-background-color: #3F3F3F; -fx-cursor: hand;" text="Log In" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <ImageView fitHeight="260.0" fitWidth="249.0" layoutX="38.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../pictures/logo.png" />
+               </image></ImageView>
          </children>
-      </HBox>
-      <HBox alignment="CENTER" spacing="10.0">
-         <children>
-            <Label text="Password " />
-            <PasswordField fx:id="userPassword" />
-         </children>
-      </HBox>
-      <Button mnemonicParsing="false" onAction="#login" style="-fx-background-color: #5667ec; -fx-cursor: hand;" text="Log In" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font></Button>
-      <Label fx:id="resultLabel" styleClass="test" text="" />
-      <HBox alignment="CENTER" spacing="5.0">
-         <children>
-            <Label text="Don't have an account yet?" />
-            <Button mnemonicParsing="false" onAction="#registerScenebtn" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Register" textFill="#5667ec" underline="true">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font></Button>
-         </children>
-      </HBox>
+      </AnchorPane>
    </children>
 </VBox>

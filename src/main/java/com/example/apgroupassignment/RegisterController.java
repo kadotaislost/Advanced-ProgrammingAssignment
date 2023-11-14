@@ -24,7 +24,7 @@ public class RegisterController {
     @FXML
     private ComboBox<String> userGender;
     @FXML
-    private TextField userNationality;
+    private ComboBox<String> userNationality;
     @FXML
     private PasswordField userPassword,confirmPassword;
 
@@ -42,7 +42,7 @@ public class RegisterController {
         String email = userEmail.getText();
         String birthYear = dateOfBirth.getValue().toString();
         String gender = userGender.getValue();
-        String nationality = userNationality.getText();
+        String nationality = userNationality.getValue();
         String password = userPassword.getText();
 
         if(verifyRegister()){
@@ -94,7 +94,7 @@ public class RegisterController {
         String email = userEmail.getText();
         String birthYear = dateOfBirth.getValue().toString();
         String gender = userGender.getValue();
-        String nationality = userNationality.getText();
+        String nationality = userNationality.getValue();
         String password = userPassword.getText();
         String confPwd = confirmPassword.getText();
         String username = user.getText();
