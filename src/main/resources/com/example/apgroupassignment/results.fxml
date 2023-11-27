@@ -6,9 +6,9 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apgroupassignment.ResultController">
    <children>
-      <AnchorPane fx:id="bg" minWidth="120.0" prefHeight="502.0" prefWidth="371.0" style="-fx-background-color: #A89893;">
+      <AnchorPane fx:id="bg" minWidth="120.0" prefHeight="502.0" prefWidth="371.0" style="-fx-background-color: #FAF9F6;">
          <children>
-            <Label layoutX="128.0" layoutY="14.0" text="RESULTS" textFill="#413f3a">
+            <Label layoutX="128.0" layoutY="14.0" text="RESULTS">
                <font>
                   <Font name="Segoe UI Bold" size="29.0" />
                </font>
@@ -19,7 +19,7 @@
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
             </Label>
-            <Pane layoutX="-7.0" layoutY="73.0" prefHeight="232.0" prefWidth="382.0" style="-fx-background-color: #F9FAF6;">
+            <Pane layoutX="-7.0" layoutY="73.0" prefHeight="232.0" prefWidth="382.0" style="-fx-background-color: #FFFFFF;">
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="31.0" prefHeight="28.0" prefWidth="74.0" text="Name:">
                      <font>
@@ -91,7 +91,7 @@
                <font>
                   <Font size="20.0" />
                </font></Label>
-            <Label layoutX="40.0" layoutY="184.0" text="Mode:">
+            <Label layoutX="41.0" layoutY="183.0" text="Mode:">
                <font>
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font></Label>
@@ -99,27 +99,27 @@
                <font>
                   <Font size="20.0" />
                </font></Label>
-            <Label layoutX="40.0" layoutY="219.0" prefHeight="23.0" prefWidth="208.0" text="Standard Deviation:">
+            <Label layoutX="39.0" layoutY="229.0" prefHeight="23.0" prefWidth="208.0" text="Standard Deviation:">
                <font>
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font></Label>
-            <Label fx:id="sd" layoutX="269.0" layoutY="215.0" prefHeight="30.0" prefWidth="59.0" text="4">
+            <Label fx:id="sd" layoutX="269.0" layoutY="225.0" prefHeight="30.0" prefWidth="59.0" text="4">
                <font>
                   <Font size="20.0" />
                </font></Label>
-            <Label layoutX="39.0" layoutY="257.0" text="Max Score:">
+            <Label layoutX="39.0" layoutY="271.0" text="Max Score:">
                <font>
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font></Label>
-            <Label fx:id="max" layoutX="269.0" layoutY="253.0" prefHeight="30.0" prefWidth="59.0" text="5">
+            <Label fx:id="max" layoutX="269.0" layoutY="267.0" prefHeight="30.0" prefWidth="59.0" text="5">
                <font>
                   <Font size="20.0" />
                </font></Label>
-            <Label layoutX="41.0" layoutY="300.0" text="Min Score:">
+            <Label layoutX="41.0" layoutY="314.0" text="Min Score:">
                <font>
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font></Label>
-            <Label fx:id="min" layoutX="269.0" layoutY="296.0" prefHeight="30.0" prefWidth="59.0" text="6">
+            <Label fx:id="min" layoutX="270.0" layoutY="310.0" prefHeight="30.0" prefWidth="59.0" text="6">
                <font>
                   <Font size="20.0" />
                </font></Label>

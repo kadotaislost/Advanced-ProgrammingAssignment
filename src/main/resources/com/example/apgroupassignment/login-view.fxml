@@ -24,10 +24,10 @@
                   </Label>
                   <PasswordField fx:id="userPassword" layoutX="148.0" layoutY="217.0" prefHeight="26.0" prefWidth="192.0" promptText="Password" />
                   <Label layoutX="98.0" layoutY="363.0" text="Don't have an account yet?" />
-                  <Label fx:id="resultLabel" alignment="CENTER" layoutX="108.0" layoutY="336.0" prefHeight="17.0" prefWidth="172.0" styleClass="test" />
-                  <Button layoutX="241.0" layoutY="358.0" mnemonicParsing="false" onAction="#registerScenebtn" prefHeight="18.0" prefWidth="68.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Register" textFill="#5667ec" underline="true">
+                  <Label fx:id="resultLabel" alignment="CENTER" layoutX="108.0" layoutY="336.0" prefHeight="17.0" prefWidth="172.0" styleClass="test" textFill="#f70000" />
+                  <Button layoutX="241.0" layoutY="358.0" mnemonicParsing="false" onAction="#registerScenebtn" prefHeight="18.0" prefWidth="68.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Register" textFill="#000ac9" underline="true">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font size="13.0" />
                      </font>
                   </Button>
                   <Label layoutX="135.0" layoutY="50.0" text="LOGIN">

@@ -1,7 +1,6 @@
 package com.example.apgroupassignment;
 
 import com.opencsv.CSVReader;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -61,7 +60,7 @@ public class LoginController {
         return false;
     }
 
-    public void registerScenebtn(ActionEvent event) throws IOException {
+    public void registerScenebtn() throws IOException {
         application.registerScene();
     }
 }

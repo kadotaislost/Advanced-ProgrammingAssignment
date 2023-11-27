@@ -7,9 +7,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class HomeController {
 
@@ -20,9 +22,9 @@ public class HomeController {
 
 
     @FXML
-    private void initialize() throws IOException {
+    private void initialize() {
 
-        username.setText("Welcome "+ CurrentUserDetails.naam);
+        username.setText("Welcome "+ CurrentUserDetails.naam+"!");
 
 
         startQuizBtn.setOnAction(new EventHandler<ActionEvent>() {
@@ -36,6 +38,9 @@ public class HomeController {
                     FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("quiz.fxml"));
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
+                    stage.setTitle("Quiz");
+                    Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/pictures/logo.png")));
+                    stage.getIcons().add(icon);
                     stage.setScene(scene);
                     stage.show();
                     quizController controller = fxmlLoader.getController();
@@ -60,6 +65,9 @@ public class HomeController {
             FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("results.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
+            Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/pictures/logo.png")));
+            stage.getIcons().add(icon);
+            stage.setTitle("Results");
             stage.setScene(scene);
             stage.show();
 

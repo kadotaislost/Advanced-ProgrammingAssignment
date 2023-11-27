@@ -15,15 +15,20 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class quizController {
 
     public static boolean isQuizCompleted = false;
+    @FXML
+    public ImageView flag;
 
     String[] answers = {
             "Kuala Lumpur",
@@ -53,6 +58,7 @@ public class quizController {
     private int minutes = 5;
     private int seconds = 0;
     private Timeline timeline;
+    public static int score = 0;
 
     private List<String[]> questionsWithOptions;
     private int currentQuestionIndex = 0;
@@ -72,7 +78,6 @@ public class quizController {
     @FXML
     private Label name, gender, date, timer, warn, nationality ;
 
-    public static int score = 0;
 
     @FXML
     private void initialize() {
@@ -83,13 +88,23 @@ public class quizController {
         setDateLabel();
     }
 
+
     private void loadUserDetails() {
         name.setText(CurrentUserDetails.naam);
         gender.setText(CurrentUserDetails.linga);
         nationality.setText(CurrentUserDetails.nationality);
+        if (CurrentUserDetails.nationality.equals("Malaysian")) {
+            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/pictures/malaysiaflag.png")));
+            flag.setImage(image);
+        } else if (CurrentUserDetails.nationality.equals("Singaporean")) {
+            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/pictures/singaporeflag.png")));
+            flag.setImage(image);
 
+        } else {
+            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/pictures/thaiflaag3.png")));
+            flag.setImage(image);
+        }
     }
-
 
     public void startTimer() {
         timeline.play();
@@ -234,6 +249,9 @@ public class quizController {
 
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
+        stage.setTitle("Results");
+        Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/pictures/logo.png")));
+        stage.getIcons().add(icon);
         stage.setScene(scene);
         stage.show();
     }

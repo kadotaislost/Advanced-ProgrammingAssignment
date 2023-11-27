@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -230,6 +231,9 @@ public class ResultController {
             FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("home-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
+            Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/pictures/logo.png")));
+            stage.getIcons().add(icon);
+            stage.setTitle("Home");
             stage.setScene(scene);
             stage.show();
 

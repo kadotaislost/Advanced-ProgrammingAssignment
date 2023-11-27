@@ -63,7 +63,7 @@ public class RegisterController {
     }
 
     private boolean verifyRegister(){
-        return checkAllFieldsFilled() && checkEmailRegisteredOrNot(userEmail.getText()) && checkPasswordMatched() && checkUsernameRegisteredOrNot(user.getText());
+        return checkAllFieldsFilled() && checkEmailRegisteredOrNot(userEmail.getText()) && checkPasswordMatched() && checkUsernameRegisteredOrNot(user.getText()) && checkPasswordLength(userPassword.getText());
     }
 
     private boolean checkUsernameRegisteredOrNot(String username) {
@@ -81,6 +81,13 @@ public class RegisterController {
         return true;
     }
 
+    private boolean checkPasswordLength(String password) {
+        if (password.length() >= 8) {
+            return true;
+        }
+        error.setText("Password must be at least 8 characters long");
+        return false;
+    }
     private boolean checkPasswordMatched() {
         if (userPassword.getText().equals(confirmPassword.getText())) {
             return true;
@@ -99,7 +106,7 @@ public class RegisterController {
         String confPwd = confirmPassword.getText();
         String username = user.getText();
 
-        if(name.equals("") || email.equals("") || birthYear.equals("") || gender.equals("") || nationality.equals("") || password.equals("") || confPwd.equals("") || username.equals("")){
+        if(name.isEmpty() || email.isEmpty() || birthYear.isEmpty() || gender.isEmpty() || nationality.isEmpty() || password.isEmpty() || confPwd.isEmpty() || username.isEmpty()){
             error.setText("Please fill all the fields");
             return false;
         }
